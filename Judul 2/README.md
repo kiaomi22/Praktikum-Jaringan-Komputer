@@ -8,7 +8,7 @@
 
 ## File Cisco Packet Tracer  
 **TA 2** `TA2.pkt`  
-[Klik di sini untuk mengunduh file Cisco Packet Tracer](Judul\ 2/TA2.pkt)
+[Klik di sini untuk mengunduh file Cisco Packet Tracer](Judul%202/TA2.pkt)
 
 ## Topologi Jaringan  
 Berikut adalah tampilan topologi jaringan yang digunakan pada praktikum ini:
@@ -23,8 +23,9 @@ Pada awal pengujian, komunikasi antar subnet belum berhasil dilakukan karena ant
 <img width="869" height="889" alt="image" src="https://github.com/user-attachments/assets/7fbfc407-0133-4475-bc4a-09ffd6255a6e" />
 
 # Ping PC-B From S1
-Pengujian ini dilakukan untuk memastikan bahwa switch mampu terhubung dengan perangkat pada jaringan lain. Hasilnya menunjukkan bahwa proses *ping* berhasil, yang berarti switch dapat meneruskan permintaan ICMP melalui gateway (router) menuju jaringan tujuan. Hal ini menunjukkan bahwa router telah berhasil melakukan *routing* lalu lintas *ping* antar subnet, dan secara bawaan, switch Cisco 2960 akan otomatis mengaktifkan antarmuka yang terhubung ke perangkat. 
-<img width="601" height="215" alt="image" src="https://github.com/user-attachments/assets/ec23fc50-d978-468f-acd2-6e41ebc402fe" />
+Pengujian ini dilakukan untuk memastikan bahwa switch mampu terhubung dengan perangkat pada jaringan lain. Hasilnya menunjukkan bahwa proses *ping* berhasil, yang berarti switch dapat meneruskan permintaan ICMP melalui gateway (router) menuju jaringan tujuan. Hal ini menunjukkan bahwa router telah berhasil melakukan *routing* lalu lintas *ping* antar subnet. 
+<img width="601" height="215" alt="image" src="https://github.com/user-attachments/assets/1bb385d4-c079-46ce-8b6f-5b74a2628535" />
+
 
 ## Kesimpulan  
 Hasil praktikum menunjukkan bahwa konfigurasi berhasil ketika seluruh perangkat dapat melakukan *ping* antar subnet tanpa error.
