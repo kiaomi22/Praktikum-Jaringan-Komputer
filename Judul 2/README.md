@@ -8,7 +8,7 @@
 
 ## File Cisco Packet Tracer  
 **TA 2** `TA2.pkt`  
-[Klik di sini untuk mengunduh file Cisco Packet Tracer](Judul%202/TA2.pkt)
+[Klik di sini untuk mengunduh file Cisco Packet Tracer](Judul\ 2/TA2.pkt)
 
 ## Topologi Jaringan  
 Berikut adalah tampilan topologi jaringan yang digunakan pada praktikum ini:
