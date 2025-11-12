@@ -8,12 +8,11 @@
 
 ## File Cisco Packet Tracer  
 **TA 3** `TA3.pkt`  
-[Klik di sini untuk mengunduh file Cisco Packet Tracer](Judul3.pkt)
+[Klik di sini untuk mengunduh file Cisco Packet Tracer](Judul 3.pkt)
 
 ## Topologi Jaringan  
 Berikut adalah tampilan topologi jaringan yang digunakan pada praktikum ini:
-
-<img width="536" height="517" alt="image" src="https://github.com/user-attachments/assets/cd719650-d11d-4a6d-b222-8e9f407886a2" />
+<img width="1285" height="346" alt="image" src="https://github.com/user-attachments/assets/6be062f9-0325-4cbd-9e21-574531a7bcf6" />
 
 ## Deskripsi Singkat  
 Lab Packet Tracer ini mengonfigurasi VLAN dan 802.1Q Trunking untuk meningkatkan performa dan keamanan jaringan. Dimulai dengan membuat VLAN terpisah (seperti VLAN 10 untuk "Operations" dan VLAN 99 untuk "Management") dan mendaftarkan port PC serta SVI switch ke VLAN tersebut.
