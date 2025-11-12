@@ -7,28 +7,25 @@
 
 
 ## File Cisco Packet Tracer  
-**TA 3** `TA2.pkt`  
-[Klik di sini untuk mengunduh file Cisco Packet Tracer](TA3.pkt)
+**TA 3** `TA3.pkt`  
+[Klik di sini untuk mengunduh file Cisco Packet Tracer](Judul3.pkt)
 
 ## Topologi Jaringan  
 Berikut adalah tampilan topologi jaringan yang digunakan pada praktikum ini:
-(<img width="570" height="147" alt="image" src="https://github.com/user-attachments/assets/d846952a-83c0-4309-ae5d-e81e9ee5c858" />)
+<img width="536" height="517" alt="image" src="https://github.com/user-attachments/assets/cd719650-d11d-4a6d-b222-8e9f407886a2" />
 
 ## Deskripsi Singkat  
-Pada praktikum ini dilakukan konfigurasi dasar antara **switch** dan **router** menggunakan Cisco Packet Tracer. Tujuannya adalah agar setiap perangkat dalam jaringan dapat saling berkomunikasi melalui konfigurasi IP dan routing sederhana.
+Lab Packet Tracer ini mengonfigurasi VLAN dan 802.1Q Trunking untuk meningkatkan performa dan keamanan jaringan. Dimulai dengan membuat VLAN terpisah (seperti VLAN 10 untuk "Operations" dan VLAN 99 untuk "Management") dan mendaftarkan port PC serta SVI switch ke VLAN tersebut.
 
-## Hasil Uji 
-# Ping PC-B From PC-A
-Pada awal pengujian, komunikasi antar subnet belum berhasil dilakukan karena antarmuka router (default gateway) belum dikonfigurasi, sehingga lalu lintas Layer 3 belum dapat dirutekan antar subnet. Setelah konfigurasi antarmuka router dilakukan, pengujian *ping* menunjukkan hasil berhasil, menandakan proses routing antar jaringan sudah berjalan dengan baik. 
-<img width="869" height="889" alt="image" src="https://github.com/user-attachments/assets/7fbfc407-0133-4475-bc4a-09ffd6255a6e" />
-
-# Ping PC-B From S1
-Pengujian ini dilakukan untuk memastikan bahwa switch mampu terhubung dengan perangkat pada jaringan lain. Hasilnya menunjukkan bahwa proses *ping* berhasil, yang berarti switch dapat meneruskan permintaan ICMP melalui gateway (router) menuju jaringan tujuan. Hal ini menunjukkan bahwa router telah berhasil melakukan *routing* lalu lintas *ping* antar subnet. 
-<img width="601" height="215" alt="image" src="https://github.com/user-attachments/assets/1bb385d4-c079-46ce-8b6f-5b74a2628535" />
-
+## Hasil Pengujian Akhir (Setelah Trunking Dikonfigurasi)
+Tabel ini merangkum hasil konektivitas akhir dari lab setelah S1 dan S2 terhubung melalui link trunk 802.1Q.
+| Dari (Sumber) | Ke (Tujuan) | VLAN Sumber | VLAN Tujuan | Status Ping | Alasan |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **PC-A** | **PC-B** | VLAN 10 | VLAN 10 | ✅ **BERHASIL** | Perangkat berada di VLAN yang sama, dan trunk mengizinkan lalu lintas VLAN 10. |
+| **S1** | **S2** | VLAN 99 | VLAN 99 | ✅ **BERHASIL** | Perangkat berada di VLAN yang sama (Management), dan trunk mengizinkan lalu lintas VLAN 99. |
+| **PC-A** | **S1** | VLAN 10 | VLAN 99 | ❌ **GAGAL** | Perangkat berada di VLAN yang berbeda. Diperlukan router (Layer 3) untuk Inter-VLAN routing. |
+| **PC-B** | **S2** | VLAN 10 | VLAN 99 | ❌ **GAGAL** | Perangkat berada di VLAN yang berbeda. Diperlukan router (Layer 3) untuk Inter-VLAN routing. |
 
 ## Kesimpulan  
-Hasil praktikum menunjukkan bahwa konfigurasi berhasil ketika seluruh perangkat dapat melakukan *ping* antar subnet tanpa error.
-# Tampilan Topologi #
-<img width="440" height="505" alt="image" src="https://github.com/user-attachments/assets/0b6384f0-4df6-4644-9b31-eb521fc2c6a6" />
+Lab ini menunjukkan bahwa VLAN berhasil memisahkan jaringan ke dalam grup yang berbeda (seperti VLAN 10 dan 99) . Pemisahan ini awalnya memutus komunikasi antar PC di switch yang berbeda. Masalah ini diatasi dengan mengonfigurasi 802.1Q Trunk , yaitu jalur khusus yang memungkinkan lalu lintas dari berbagai VLAN (VLAN 10 dan 99) lewat di antara switch. Hasil akhirnya, komunikasi di dalam VLAN yang sama (PC-A ke PC-B) berhasil dipulihkan , sementara komunikasi antar VLAN yang berbeda (PC-A ke S1) tetap terisolasi.
 
