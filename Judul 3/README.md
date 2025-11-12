@@ -12,6 +12,7 @@
 
 ## Topologi Jaringan  
 Berikut adalah tampilan topologi jaringan yang digunakan pada praktikum ini:
+
 <img width="536" height="517" alt="image" src="https://github.com/user-attachments/assets/cd719650-d11d-4a6d-b222-8e9f407886a2" />
 
 ## Deskripsi Singkat  
